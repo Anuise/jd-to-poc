@@ -19,6 +19,8 @@ test("analyzeCompanyCulture extracts interview signals", () => {
 test("analyzeJobDescription extracts skill signals", () => {
   const result = analyzeJobDescription(jd);
   assert.ok(result.requiredSkills.some((item) => item.includes("TypeScript")));
+  assert.ok(result.preferredSkills.some((item) => item.includes("Data visualization")));
+  assert.ok(!result.requiredSkills.some((item) => item.includes("Data visualization")));
   assert.ok(result.evidenceToShow.length > 0);
 });
 

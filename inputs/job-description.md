@@ -6,12 +6,12 @@
 
 ## Responsibilities
 
-請貼上或整理主要職責。
+- 請貼上或整理主要職責。
 
 ## Required Skills
 
-請列出必要技能。
+- 請列出必要技能。
 
 ## Preferred Skills
 
-請列出加分技能。
+- 請列出加分技能。
