@@ -29,6 +29,8 @@ test("runPipeline writes generated POC files", async () => {
     const spec = await readFile(join(outputDir, "poc-spec.md"), "utf8");
     assert.match(spec, /# .*POC/);
     assert.match(spec, /Skill Evidence/);
+    assert.match(spec, /Implementation Plan/);
+    assert.match(spec, /Demo Talking Points/);
   } finally {
     await rm(root, { recursive: true, force: true });
   }

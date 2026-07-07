@@ -18,11 +18,11 @@ ${proposal.features.map((item) => `- ${item}`).join("\n")}
 
 ${proposal.skillEvidence.map((item) => `- ${item}`).join("\n")}
 
-## 實作計畫
+## Implementation Plan（實作計畫）
 
 ${proposal.implementationPlan.map((item, index) => `${index + 1}. ${item}`).join("\n")}
 
-## Demo 重點
+## Demo Talking Points（Demo 重點）
 
 ${proposal.demoTalkingPoints.map((item) => `- ${item}`).join("\n")}
 `
