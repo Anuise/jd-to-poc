@@ -1,0 +1,501 @@
+# Instincts generated from https://github.com/Anuise/jd-to-poc
+# Generated: 2026-07-08T04:58:50.696Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: jd-to-poc-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: chore, feat, docs, fix
+
+## Evidence
+
+- 10 commits analyzed
+- Detected conventional commit pattern
+- Examples: docs: add base project spec and plan, chore: add project config and input templates
+
+---
+id: jd-to-poc-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Commit Length
+
+## Action
+
+Keep commit messages concise (~37 characters)
+
+## Evidence
+
+- Average commit message length: 37 chars
+- Based on 10 commits
+
+---
+id: jd-to-poc-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: jd-to-poc-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: jd-to-poc-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: jd-to-poc-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: jd-to-poc-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: jd-to-poc-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~18x per month
+- Files: src/domain/*, src/io/*, tests/*
+
+---
+id: jd-to-poc-workflow-feature-development-with-tests-and-docs
+trigger: "when doing feature development with tests and docs"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Workflow Feature Development With Tests And Docs
+
+## Action
+
+Follow the feature-development-with-tests-and-docs workflow:
+1. Add or update implementation files in src/ (e.g., modules, generators, pipeline)
+2. Add or update corresponding test files in tests/
+3. Add or update related documentation or report files (e.g., .superpowers/sdd/, docs/)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: src/modules/*.ts, src/generators/*.ts, src/pipeline/*.ts
+
+---
+id: jd-to-poc-workflow-documentation-and-spec-update
+trigger: "when doing documentation and spec update"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Workflow Documentation And Spec Update
+
+## Action
+
+Follow the documentation-and-spec-update workflow:
+1. Create or update markdown files in docs/ or .superpowers/sdd/
+2. Update README.md or related guides
+3. Optionally update templates or example files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs/**/*.md, .superpowers/sdd/*.md, README.md
+
+---
+id: jd-to-poc-workflow-input-schema-and-example-update
+trigger: "when doing input schema and example update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Anuise/jd-to-poc
+---
+
+# Jd To Poc Workflow Input Schema And Example Update
+
+## Action
+
+Follow the input-schema-and-example-update workflow:
+1. Add or update files in inputs/ and examples/sample-inputs/
+2. Update docs/input-format.md to reflect changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: inputs/*.md, examples/sample-inputs/*.md, docs/input-format.md
+
+---
+id: jd-to-poc-instinct-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct File Naming
+
+## Action
+
+Name the file using camelCase (e.g., inputReader.ts)
+
+## Evidence
+
+- Pattern in src/domain/inputReader.ts
+- Pattern in src/generators/pocGenerator.ts
+
+---
+id: jd-to-poc-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in src/domain/inputReader.ts
+- Pattern in src/generators/pocGenerator.ts
+
+---
+id: jd-to-poc-instinct-class-naming
+trigger: "When creating a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in src/domain/JobDescription.ts
+- Pattern in src/generators/PocGenerator.ts
+
+---
+id: jd-to-poc-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in src/domain/constants.ts
+
+---
+id: jd-to-poc-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in src/domain/inputReader.ts
+- Pattern in src/generators/pocGenerator.ts
+
+---
+id: jd-to-poc-instinct-export-style
+trigger: "When exporting functions or classes"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in src/domain/inputReader.ts
+- Pattern in src/generators/pocGenerator.ts
+
+---
+id: jd-to-poc-instinct-test-file-location
+trigger: "When adding tests for a feature"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Test File Location
+
+## Action
+
+Place test files in the separate tests/ directory with a .test.ts suffix
+
+## Evidence
+
+- Pattern in tests/inputReader.test.ts
+- Pattern in tests/pocGenerator.test.ts
+
+---
+id: jd-to-poc-instinct-test-type
+trigger: "When writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Test Type
+
+## Action
+
+Write unit tests for new features
+
+## Evidence
+
+- Pattern in tests/*.test.ts
+
+---
+id: jd-to-poc-instinct-commit-format
+trigger: "When making a git commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Commit Format
+
+## Action
+
+Use conventional commit prefixes: chore, feat, docs, fix
+
+## Evidence
+
+- docs: add base project spec and plan
+- feat: add input reader and domain types
+- fix: make test script cross-platform
+
+---
+id: jd-to-poc-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Commit Length
+
+## Action
+
+Keep commit messages concise (average ~37 characters)
+
+## Evidence
+
+- Average commit length in history is 37
+- Example: feat: add analysis modules
+
+---
+id: jd-to-poc-instinct-feature-dev-workflow
+trigger: "When adding a new module, generator, or pipeline step"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Feature Dev Workflow
+
+## Action
+
+Add or update implementation files in src/, add or update corresponding test files in tests/, and update related documentation or reports
+
+## Evidence
+
+- Workflow: feature-development-with-tests-and-docs
+- Commits: feat: add input reader and domain types, tests/inputReader.test.ts, docs/superpowers/specs/
+
+---
+id: jd-to-poc-instinct-docs-update-workflow
+trigger: "When documenting new features or updating guides/specs"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Docs Update Workflow
+
+## Action
+
+Create or update markdown files in docs/ or .superpowers/sdd/, update README.md or related guides, optionally update templates or example files
+
+## Evidence
+
+- Workflow: documentation-and-spec-update
+- Commits: docs: add CLI usage and extension guides
+
+---
+id: jd-to-poc-instinct-input-schema-workflow
+trigger: "When introducing new input types or updating input requirements"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Anuise/jd-to-poc
+---
+
+# Jd To Poc Instinct Input Schema Workflow
+
+## Action
+
+Add or update files in inputs/ and examples/sample-inputs/, update docs/input-format.md to reflect changes
+
+## Evidence
+
+- Workflow: input-schema-and-example-update
+- Commits: chore: add project config and input templates
+

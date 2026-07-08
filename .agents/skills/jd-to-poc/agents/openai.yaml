@@ -1,0 +1,6 @@
+interface:
+  display_name: "Jd To Poc"
+  short_description: "Repo-specific patterns and workflows for jd-to-poc"
+  default_prompt: "Use the jd-to-poc repo skill to follow existing architecture, testing, and workflow conventions."
+policy:
+  allow_implicit_invocation: true
